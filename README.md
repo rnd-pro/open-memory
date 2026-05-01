@@ -4,7 +4,9 @@
 
 **The Global Marketplace for AI Agent Context.** A centralized, public registry of Agent Skills, Workflows, Rules, and Templates for the RND-PRO ecosystem. 
 
-```text
+Anyone can contribute universal skills here, which can then be "installed" via the Agent Portal into private Team Memory (Layer 2) or Local Project Context (Layer 3).
+
+```
 ┌─────────────────────────────────┐
 │  IDE Agent                      │  ← Claude, GPT, Gemini, etc.
 │  (Antigravity / Cursor / ...)   │
@@ -53,9 +55,20 @@ The RND-PRO ecosystem isolates context into three distinct layers to prevent tok
 > [!IMPORTANT]
 > When contributing to Open Memory, you **must** adhere to the **Abbreviated English Dialect**. Do not use conversational sentences. Write instructions as logical flows (`1file+no_risk -> P2`).
 
-## The RND-PRO Ecosystem
+## MCP Ecosystem
 
-* **[Agent Portal](https://github.com/rnd-pro/mcp-agent-portal)**: The visual UI and orchestration gateway.
-* **[Agent Pool MCP](https://github.com/nicholasgriffintn/agent-pool-mcp)**: Task delegation and pipelines.
-* **[Project Graph MCP](https://github.com/rnd-pro/project-graph-mcp)**: AST-based context analysis.
-* **[Symbiote Node](https://github.com/rnd-pro/symbiote-node)**: Visual graph engine.
+Best used as part of [**mcp-agent-portal**](https://github.com/rnd-pro/mcp-agent-portal) — a unified MCP aggregator that bundles agent-pool, project-graph, and context-x behind a single config entry.
+
+## Related Projects
+- [mcp-agent-portal](https://github.com/rnd-pro/mcp-agent-portal) — Unified MCP aggregator + web dashboard + AI agent runtime
+- [agent-pool-mcp](https://github.com/nicholasgriffintn/agent-pool-mcp) — Multi-agent orchestration via parallel workers
+- [project-graph-mcp](https://github.com/rnd-pro/project-graph-mcp) — AST-based codebase analysis for AI agents
+- [Symbiote.js](https://github.com/symbiotejs/symbiote.js) — Isomorphic Reactive Web Components framework
+
+## License
+
+MIT © [RND-PRO.com](https://rnd-pro.com)
+
+---
+
+**Made with ❤️ by the RND-PRO team**
