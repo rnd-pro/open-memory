@@ -2,9 +2,7 @@
 
 # open-memory
 
-**The Global Marketplace for AI Agent Context.** A centralized, public registry of Agent Skills, Workflows, Rules, and Templates for the RND-PRO ecosystem. 
-
-Anyone can contribute universal skills here, which can then be "installed" via the Agent Portal into private Team Memory (Layer 2) or Local Project Context (Layer 3).
+**The Global Marketplace for AI Agent Context.** A centralized, public registry of Agent Skills, Workflows, Rules, and Templates for the RND-PRO ecosystem — anyone can contribute universal skills here. Install them via the Agent Portal → sync to your private Team Memory → **empower your AI agents**.
 
 ```
 ┌─────────────────────────────────┐
