@@ -1,34 +1,61 @@
-# Open Memory 🧠
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Open Memory** is the global, public marketplace and context layer (Layer 1) for the **RND-PRO Autonomous Agent Ecosystem**. 
+# open-memory
 
-This repository serves as a centralized registry of **Agent Skills, Rules, Workflows, and Templates**. Anyone can contribute universal skills here, which can then be "installed" via the Agent Portal into private Team Memory (Layer 2) or Local Project Context (Layer 3).
+**The Global Marketplace for AI Agent Context.** A centralized, public registry of Agent Skills, Workflows, Rules, and Templates for the RND-PRO ecosystem. 
 
----
+```text
+┌─────────────────────────────────┐
+│  IDE Agent                      │  ← Claude, GPT, Gemini, etc.
+│  (Antigravity / Cursor / ...)   │
+└────────────┬────────────────────┘
+             │ MCP (stdio)
+┌────────────▼────────────────────┐
+│  mcp-agent-portal               │
+│  (MCP aggregator + web UI)      │
+└──┬──────────────────────────────┘
+   │ Context Layer Synchronization
+┌──▼──────────────────────────────┐
+│  context-x-mcp                  │  ← The Memory Engine
+└──┬────────────────────┬─────────┘
+   │ Sync               │ Sync
+   ▼                    ▼
+[open-memory]        [team-memory]
+Layer 1 (Public)     Layer 2 (Private)
+```
 
-## 🌐 The RND-PRO Ecosystem
+> [!TIP]
+> Agents can dynamically discover and "install" universal skills from `open-memory` directly into a project's `.agents/skills` folder.
 
-Open Memory is designed to work seamlessly with our suite of Model Context Protocol (MCP) servers and tools. To understand how this repository fits into the bigger picture, explore our core projects:
+### The 3-Tier Context Architecture
 
-* **[Agent Portal](https://github.com/rnd-pro/mcp-agent-portal)**: The main visual UI, chat interface, and orchestration gateway for managing AI agents.
-* **[Agent Pool MCP](https://github.com/nicholasgriffintn/agent-pool-mcp)**: The engine for multi-agent task delegation, scheduling, and peer-reviewed pipelines.
-* **[Project Graph MCP](https://github.com/rnd-pro/project-graph-mcp)**: High-precision, AST-based codebase context analysis and architectural documentation for agents.
-* **[Symbiote Node](https://github.com/rnd-pro/symbiote-node)**: The underlying visual graph and node-based UI framework powering the portal ecosystem.
+The RND-PRO ecosystem isolates context into three distinct layers to prevent token bloat and maintain strict security boundaries:
 
----
+1. **Layer 1: Open Memory** (This repository) — Global marketplace of public, reusable skills.
+2. **Layer 2: Team Memory** (`rnd-pro/team-memory`) — Private team rules and internal knowledge.
+3. **Layer 3: Local Context** (`.ctx` files via `project-graph-mcp`) — AST-based codebase structural knowledge.
 
-## 📁 Directory Structure
+## Features
 
-We use a strict directory structure to help agents and developers easily navigate the context:
+- **Standardized Skills** — Universal agent patterns (e.g., *React component generation*, *Docker optimization*).
+- **Abbreviated Dialect** — All rules are written in a token-optimized, pseudo-code format to maximize LLM context windows.
+- **Workflow Automation** — Complex CI/CD, testing, and deployment sequences formatted for autonomous execution.
+- **Cross-Platform** — Usable by any MCP-compatible agent or orchestrator.
 
-* **`rules/`** — Global behavioral standards and engineering workflows for agents.
-* **`skills/`** — Actionable, universal agent skills (e.g., *how to debug an architecture*, *how to write a Dockerfile*).
-* **`workflows/`** — Multi-step checklists and processes (e.g., CI/CD, release protocols, testing sequences).
-* **`templates/`** — Standardized code templates and boilerplate files.
-* **`configs/`** — Public configurations and linting rules.
+## Directory Structure
 
-## 🤝 Contributing
+- `rules/` — Global behavioral standards for agents.
+- `skills/` — Actionable, universal agent skills.
+- `workflows/` — Multi-step sequences and pipelines.
+- `templates/` — Standard code templates.
+- `configs/` — Public configurations.
 
-When contributing to Open Memory, please adhere to the **Abbreviated English Dialect** to optimize token usage for LLMs. Focus on architectural patterns and clear, concise conditions rather than conversational instructions.
+> [!IMPORTANT]
+> When contributing to Open Memory, you **must** adhere to the **Abbreviated English Dialect**. Do not use conversational sentences. Write instructions as logical flows (`1file+no_risk -> P2`).
 
-*Maintained by the RND-PRO team.*
+## The RND-PRO Ecosystem
+
+* **[Agent Portal](https://github.com/rnd-pro/mcp-agent-portal)**: The visual UI and orchestration gateway.
+* **[Agent Pool MCP](https://github.com/nicholasgriffintn/agent-pool-mcp)**: Task delegation and pipelines.
+* **[Project Graph MCP](https://github.com/rnd-pro/project-graph-mcp)**: AST-based context analysis.
+* **[Symbiote Node](https://github.com/rnd-pro/symbiote-node)**: Visual graph engine.
